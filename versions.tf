@@ -8,15 +8,15 @@ terraform {
         }
     }
     backend "s3" {
-        bucket = "jsconf_laprevia_terraform"
+        bucket = "jsconf-laprevia-terraform"
         key    = "terraform/state"
         region = "us-east-1"
-        profile = "jsconf_laprevia"
+        profile = "jsconf-laprevia"
     }
 }
 
 # Provider configuration
 provider "aws" {
     region = var.region
-    profile = "jsconf_laprevia"
+    profile = "jsconf-laprevia"
 }
